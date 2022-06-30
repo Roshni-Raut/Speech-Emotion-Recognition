@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<style>
+    body{
+        margin:auto;
+        height:500px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#CCF3EE;
+    }
+    .btn{
+    background-color: rgb(10, 102, 85);
+    border:none;
+    color:white;
+    padding:10px 30px;
+    margin-left: 150px;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+  }
+  .btn:hover{
+    background-color: rgb(19, 153, 129);
+  }
+   .download{
+    background-color: rgb(17, 164, 137);
+    border:none;
+    padding:10px 30px;
+    margin: 40px 10px;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+  }
+  .download:hover{
+    background-color: rgb(64, 195, 171);
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  .img1{
+  margin-top: -100px;
+  }
+  .btn-group{
+    margin-top:-150px;
+        height:200px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+  }
+  .head{
+    color:rgb(10, 102, 85);
+    position:fixed;
+    top:0;
+    margin-left:100px;
+    text-decoration:underline;
+  }
+  .text{
+    text-align:center;
+    margin:10px;
+    font-family:Papyrus;
+    background-color:white;
+  }
+</style>
+<body>
+<div>
+    <img class="img1" src="{% static 'base-dribbble-iconography.gif' %}"><br>
+    <div class="btn-group">
+        <div>
+            <h1 class="head">  Recognize Emotion</h1>
+            <div class="text">Emotion detection has become one of the biggest <br>
+                marketing strategies, in which the mood of the customer plays an important<br>
+                role. So to detect the current emotion of the person and suggest to him the <br>
+                appropriate product or help him accordingly, will increase the demand of the <br>
+                product or the company.<br>
+            </div>
+            <button class="download">
+                <a href="https://drive.google.com/file/d/1Wx8DXBIGmr2xNASdreLbLMg5F9vprmqq/view?usp=sharing" target="_blank" download>download our NLP model</a>
+            </button>
+            <button class="download">
+                <a href="https://drive.google.com/file/d/1ZTjFEMwPJraSJEosUVgXpBOwkloopIuR/view?usp=sharing" target="_blank" download> download our Speech Recognition model</a>
+            </button>
+            <form action="home">
+                <button class="btn" type="submit">Test our Model</button>
+            </form>
+            <div>
+    </div>
+</div>
+</body>
+{% endblock %}

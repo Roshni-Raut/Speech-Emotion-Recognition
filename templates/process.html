@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<style>
+    .box{
+        width: 300px;
+        border: 1px solid silver;
+    }
+    .box1{
+        width: 500px;
+        border: 1px solid silver;
+    }
+</style>
+<body style="text-align:center">
+<div class="box1">
+    {% if error %}
+        <h3 style="color:red;">ERROR: {{speechtotext|linebreaks}}
+        </h3>
+    {% else %}
+        <h3 >Output of the audio file named {{file}} <br><br>
+            <span style="color: blue"> speech to text:</span><div class="box" style="margin:auto"> {{ speechtotext }}</div><br>
+            <span style="color: blue"> Emotion from Text: </span>{{result}}<br>
+            <span style="color: blue"> Confidence: </span>{{proba}}<br><br>
+            <span style="color: blue"> Emotion from Speech: </span>{{prediction}}
+            <br>
+        </h3>
+    {% endif %}
+</div>
+</body>
+{% endblock %}
